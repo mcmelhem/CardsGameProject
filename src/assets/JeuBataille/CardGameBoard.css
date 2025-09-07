@@ -1,0 +1,297 @@
+.card-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  
+  .card-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 300ms, transform 300ms;
+  }
+  
+  .card-exit {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .card-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
+  }
+
+  .hover-effect:hover {
+    transform: translateY(-15px); /* Apply the desired hover effect, e.g., translateY, scale, etc. */
+    /* Add any other styles for the hover effect */
+  }
+
+    /* CSS for Your Turn */
+  .your-turn {
+    font-size: 20px;
+    background-color: #28a745; /* Green background color */
+    color: #fff; /* White text color */
+    height: auto;
+    border-radius: 10px;
+  }
+
+  /* CSS for Opponent's Turn */
+  .opponent-turn {
+    font-size: 20px;
+    background-color: #dc3545; /* Red background color */
+    color: #fff; /* White text color */
+    border-radius: 10px;
+  }
+
+  /* Add the score-animation class for the animation */
+  .score-animation {
+    animation-name: scoreAnimation; /* Name of the keyframe animation */
+    animation-duration: 1.5s; /* Duration of the animation */
+    animation-timing-function: ease-in-out; /* Timing function for the animation */
+    animation-fill-mode: forwards; /* Keep the final state of the animation */
+  }
+
+  @keyframes scoreAnimation {
+    0% {
+      transform: scale(1); /* Starting scale */
+      opacity: 1; /* Starting opacity */
+    }
+    50% {
+      transform: scale(1.20); /* Scale up to 1.5x midway through the animation */
+      color: green;
+      opacity: 1; /* Fade out midway through the animation */
+    }
+    100% {
+      transform: scale(1); /* Scale back to 1x at the end of the animation */
+      opacity: 1; /* Fade in at the end of the animation */
+    }
+  }
+  .hide {
+    display: none;
+  }
+
+  /* Default style without zoom */
+  .game-layout {
+    display: flex;
+  }
+  
+  .sidebar-container {
+    width: 250px; /* Adjust width as needed */
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Fix position to the left side */
+    left: 0; /* Align to the left side of the viewport */
+    top: 0; /* Align to the top of the viewport */
+    background-color: #f5f5f5; /* Light grey background, adjust color as needed */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+    /* Add other styles such as padding, border, etc., as needed */
+  }
+  
+.game-container {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(54, 147, 54);
+  margin-left: 250px;
+  /* Your other styles */
+}
+
+@media (min-width: 0px) { /* Medium screens (md) and above */
+  .game-content {
+    transform: scale(0.9);
+  }
+}
+
+@media (min-width: 576px) { /* Medium screens (md) and above */
+  .game-content {
+    transform: scale(0.7);
+  }
+}
+
+@media (min-width: 1152px) { /* Medium screens (md) and above */
+  .game-content {
+    transform: scale(0.6);
+  }
+
+  /* Tchat: */
+  .tchat{
+    background-color: grey;
+     height: 85vh;
+      width: 22vw;
+      border-radius: 1em;
+    overflow: hidden;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+  
+  }
+  
+  .write_tchat button{
+    margin-left: 180px;
+    
+  }
+  
+  .tchatz{
+    text-align: center;
+  }
+  
+  .write_tchat{
+    width: 100%;
+    background-color: rgb(21, 23, 21);
+    color: #d2c8c8;
+    padding: 20px 20px;
+  
+    height: 80%;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+  }
+  .div_tchat{
+    position: absolute;
+     height: 75vh;
+      width: 21vw;
+      border-radius: 1em;
+      margin-right: 1545px;
+      margin-bottom: 10vh;
+    overflow: hidden;
+    text-align: center;
+    font-size: 30px;
+    background-color: blanchedalmond;
+    background-image: radial-gradient(#d2c8c8,rgb(130, 130, 152));
+    
+    }
+    
+    
+    .tchat{
+      border-bottom:1px solid black;
+      height: 70px;
+      background-image: radial-gradient(#d2c8c8,rgb(130, 130, 152));
+    
+    }
+    
+    
+    .tchat{
+      background-color: grey;
+      position: absolute;
+       height: 85vh;
+        width: 22vw;
+        border-radius: 1em;
+        margin-right: 1545px;
+        margin-bottom: 20vh;
+        margin-top: 100px;
+      overflow: hidden;
+      text-align: center;
+      font-size: 15px;
+      display: flex;
+      flex-direction: column;
+    
+    }
+    
+    .write_tchat button{
+      margin-left: 180px;
+      
+    }
+    
+    .tchatz{
+      text-align: center;
+    }
+    
+    .write_tchat{
+      position: relative;
+      width: 100%;
+      background-color: black;
+      padding: 20px 20px;
+      position: absolute;
+      bottom: 0;
+    }
+    
+    
+    
+    .div_tchat{
+      background-color: red;
+    }
+    
+    .write_tchat{
+      background-color: black;
+    
+    }
+    
+    .write_tchat{
+    background-color: grey;
+    position: absolute;
+     height: 13vh;
+      width: 22vw;
+      border-radius: 1em;
+      margin-right: 1545px;
+      margin-top: 80vh;
+    overflow: hidden;
+    text-align: center;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    
+    }
+    
+    .Tchat{
+      background-color: black;
+    }
+
+    /* -------------- */
+    .chat-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px; /* Changed from right to left */
+      padding: 5px;
+      border: 1px solid #000000;
+      border-radius: 2px;
+      cursor: pointer;
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+    
+    .chat-container {
+      display: none; /* Start as hidden */
+      position: fixed;
+      bottom: 50px;
+      left: 20px; /* Changed from right to left */
+      max-width: 600px;
+      margin: auto;
+      padding: 5px;
+      border: 1px solid #000000;
+      border-radius: 2px;
+      background: white; /* Add a background color if needed */
+      z-index: 1000; /* Ensure it's above other elements */
+    }
+    
+
+    .message-container {
+      display: flex;
+      flex-direction: column; /* Affiche les éléments dans l'ordre normal (du haut vers le bas) */
+      justify-content: flex-end;
+      border: 1px solid #ffffff;
+      border-radius: 0px;
+      padding: 1px;
+      margin-bottom: 0px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .input-container {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .input-container input {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid #000000;
+      border-radius: 0px;
+    }
+
+    .input-container button {
+      padding: 8px;
+      border: 1px solid #000000;
+      border-radius: 0px;
+      cursor: pointer;
+    }
+
+}

@@ -1,0 +1,381 @@
+* {
+    box-sizing: border-box;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+h2, h3 {
+    font-weight: 600;
+    align-self: flex-start;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('./background.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: auto 250px; /* Main content auto width, scoreboard fixed width */
+    height: 100vh; /* Full viewport height */
+}
+
+.game-container {
+    flex-grow: 1;
+    margin: 1rem;
+    overflow-y: auto;
+
+    
+}
+
+
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-row {
+    display: flex;
+    gap: 5px;
+
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.player-hand {
+    display: flex;
+    gap: 2%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-image: url('./background.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
+}
+
+.game-board {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.card-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+}
+
+.player-hand {
+    display: flex;
+    gap: 2%;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+/* Scoreboard styles */
+.scoreboard {
+    width: 250px; /* Adjust width as needed */
+
+    height: 100vh;
+    overflow-y: auto;
+ 
+    padding: 10px 20px;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: rgba(51, 51, 51, 0.9); /* Dark background for scoreboard */
+    color: #fff; /* Light text for readability */
+text-align: center;
+
+    gap: 8px;
+   
+}
+.scoreboard h2 {
+    align-self: center;
+    
+
+}
+
+
+/* Adjust main game area to prevent overlapping with the scoreboard */
+.main-game-area {
+    margin-right: 220px; /* Adjust this value based on the width of your scoreboard */
+}
+
+.player-score {
+
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+
+    font-weight: 500;
+    margin: .5rem 0;
+}
+
+@media screen and (max-width: 768px) {
+    .app-container {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .game-container {
+        margin: 1rem;
+    }
+
+    .scoreboard {
+        width: 100%; /* Scoreboard takes full width */
+        height: auto; /* Height is auto to fit content */
+       
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adjust shadow for top positioning */
+        text-align: center;
+    }
+}
+/* Existing styles... */
+
+/* Unified Margins and Padding */
+
+
+
+h2 {
+  
+    color: #333; /* Dark color for contrast */
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.7); /* Subtle white shadow */
+    font-size: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent background */
+    display: inline-block; /* To fit the background to text */
+    padding: 5px 10px; /* Some padding around the text */
+    border-radius: 5px; /* Optional: rounded corners for the background */
+    margin: 0;
+}
+
+
+@media screen and (max-width: 768px) {
+    h2, h3 {
+        font-size: 1.2rem; /* Smaller font size for smaller screens */
+    }
+
+    .player-hand img, .game-board img {
+        height: 80px; /* Smaller cards on smaller screens */
+    }
+
+    .scoreboard {
+        height: auto; /* Adjust height to fit content */
+        padding: 0;
+    }
+    .player-score {
+        display: inline-block;
+        margin:  .5rem;
+     
+    }
+}
+
+
+.card-row, .player-score {
+    background-color: rgba(255, 255, 255, 0.5); /* Lighter grey with some opacity */
+    color: #333; /* Dark text for contrast */
+}
+
+
+.player-hand img:hover, .game-board img:hover, .new-cards-area img:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.player-hand img, .game-board img,  .new-cards-area img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 80px;
+    margin-bottom: 5px;
+    box-shadow: 4px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.selected-card {
+    border: 2px solid #242424; /* Gray border for selected card */
+    opacity: 0.8;
+    transform: scale(1.05); /* Keep the card scaled when selected */
+}
+
+
+button {
+    padding: 10px 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #3c3c3c; ; /* Grayish button color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: inherit;
+}
+
+
+button:hover {
+    background-color: #323232; /* Slightly darker on hover */
+}
+
+.gameboard-newcardsdisplay-container{
+    display: flex;
+}
+
+.game-board, .new-cards-area {
+    flex-grow: 1; /* Allows both components to grow and fill the container */
+}
+
+.game-board {
+    flex-basis: 50%; /* GameBoard takes 70% of the width */
+}
+.game-board h2 {
+    align-self: flex-start;
+}
+
+.new-cards-area {
+    flex-basis: 50%; /* NewCardsDisplay takes 30% of the width */
+   gap: 10px;
+   display: flex;
+   flex-direction: column;
+
+}
+.new-cards-area div {
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   gap: 10px;
+}
+/* Responsive layout for small screens */
+@media screen and (max-width: 768px) {
+    .gameboard-newcardsdisplay-container {
+        flex-direction: column-reverse; /* Stack components vertically */
+    }
+    .game-board{
+        margin-top: 10px;
+    }
+
+    .game-board, .new-cards-area {
+        flex-basis: auto; /* Reset width to auto for vertical stacking */
+    }
+    .new-cards-area div {
+        flex-direction: row;
+    }
+   
+}
+
+.game-board-selection div {
+    cursor: pointer;
+}
+.game-board-selection h2 {
+    color: darkred;
+    font-weight: 700;
+}
+
+.game-board-selection div:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@keyframes slideCardToRow {
+    from {
+        opacity: 0;
+        transform: translateY(-20px); /* Start slightly above the final position */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.moving-card {
+    animation: slideCardToRow 0.5s ease-out forwards;
+}
+
+.registration-container, .lobby-container, .login-container, .winner-container {
+    /* Your styles here */
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    margin: auto;
+    /* Other styles as per your existing design */
+}
+
+.registration-container button, .lobby-container button, .login-container button {
+    width: 100%;
+}
+.centered-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    padding: 1rem;
+}
+
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%; /* Full width */
+    padding: 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Slightly rounded borders */
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif; /* Consistent font */
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    color: #333; /* Dark text for contrast */
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    outline: none;
+    border-color: #242424; /* Darker border on focus */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+.error {
+    color: red;
+    font-weight: 500;
+  }
+
+
+.lobby-container ul, .winner-container ul {
+    list-style: none;
+    padding: 0;
+}
+
+.lobby-container li, .winner-container li {
+
+    margin-bottom: 5px;
+ 
+    
+}
+
+.card-row {
+    min-height: 80px;
+}

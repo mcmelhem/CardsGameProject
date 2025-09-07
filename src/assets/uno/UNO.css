@@ -1,0 +1,170 @@
+.App {
+    text-align: center;
+  }
+  
+  a {
+    color: #ffffff;
+  }
+
+  .Game {
+    background-size: cover;
+    margin: 0;
+    height: 100vh;
+  }
+
+  .backgroundColorR {
+    background-color:red;
+  }
+  
+  .backgroundColorG {
+    background-color:green;
+  }
+  
+  .backgroundColorB {
+    background-color: blue;
+  }
+  
+  .backgroundColorY {
+    background-color: yellow;
+  }
+  
+  /* UNO Cards */
+  .Card {
+    width: 6rem;
+    margin: 2px;
+    cursor: pointer;
+  }
+  
+  /* Game.js Top Row */
+  .topInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 60px;
+    height: 100px;
+  }
+  
+  .topInfo>img {
+    width: 7%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .topInfo>h1 {
+    margin-top: 10px;
+    font-size: 1.8rem;
+    padding-top: 2%;
+  }
+  
+  .topInfoText {
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  /* Player Decks */
+  .player1Deck {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .player1Deck>img {
+    transition: transform 350ms;
+  }
+  
+  .player1Deck>img:hover {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  
+  .player2Deck {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+  }
+  
+  .player2Deck>img {
+    transition: transform 350ms;
+  }
+  
+  .player2Deck>img:hover {
+    transform: scale(1.08);
+    opacity: 1;
+  }
+  
+  .playerDeckText {
+    font-size: 2rem;
+    margin: 0 20px;
+  }
+  
+  /* Game.js Middle Row */
+  .middleInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .middleInfo>button {
+    align-self: center;
+  }
+  
+  /* Spinner */
+  .loader,
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+  }
+  .loader {
+    color: #ffffff;
+    font-size: 5px;
+    margin: 0 50px 0 50px;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  .loader:before,
+  .loader:after {
+    content: '';
+    position: absolute;
+    top: 0;
+  }
+  .loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  .loader:after {
+    left: 3.5em;
+  }
+  @-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0;
+    }
+  }
+  @keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0;
+    }
+  }
+  
+ 

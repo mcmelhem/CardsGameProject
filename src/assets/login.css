@@ -1,0 +1,31 @@
+body{
+    background: url(https://t4.ftcdn.net/jpg/04/82/44/29/360_F_482442914_FpCtI9wlKDH0jGkJh1f02BEk7BGvwjnD.jpg);
+          /* background-repeat: no-repeat; */
+          /* background-size: cover; */
+        }
+   
+      
+.bienvenue-text {
+    color: #868757;
+
+}
+
+.bienvenue-cartes{
+    color: hsl(49, 16%, 53%);
+}
+.login{
+   background-color: #868757;
+}
+.bienvenuediv{
+    background-color: #0000006b;
+}
+.register-text{
+    color: white
+}
+.text{
+    text-align: center;
+    font-size: 17px;
+}
+.login-text{
+      color: white
+}
